@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import Image, ttk, messagebox
+from tkinter import Frame, ttk, messagebox
 
 import controller as ctr
 
@@ -96,7 +96,7 @@ def crearVentanaPrincipal():
             entryTiempo.delete(0,tk.END)
             entryId.focus()
         
-        btnLimpiarCampos = tk.Button(container, text='Limpiar Campos', command = limpiarCampos)
+        btnLimpiarCampos = tk.Button(container, bg='#181818', text='Limpiar Campos', fg="white", command = limpiarCampos)
         btnLimpiarCampos.grid(column=2, row=0, rowspan=5, sticky=tk.S+tk.EW, padx = 5, pady = 2)
 
         limpiarCampos()
@@ -127,26 +127,26 @@ def crearVentanaPrincipal():
                 "tiempo": int(campos["tiempo"].get())
             }
         
-        btnAdicionar = tk.Button(container, text='Adicionar Tarea', command = lambda : ctr.agregar_tarea(datosFormulario()))
+        btnAdicionar = tk.Button(container,bg='#181818', text='Adicionar Tarea', fg="white", command = lambda : ctr.agregar_tarea(datosFormulario()))
         btnAdicionar.grid(column=1, row=1, sticky=tk.EW, pady = 2)
         
-        btnActualizar = tk.Button(container, text='Actualizar Tarea', command = lambda : ctr.actualizar_tarea(datosFormulario()))
+        btnActualizar = tk.Button(container, bg='#181818', text='Actualizar Tarea', fg="white", command = lambda : ctr.actualizar_tarea(datosFormulario()))
         btnActualizar.grid(column=1, row=2, sticky=tk.EW, pady = 2)
 
-        btnEliminar = tk.Button(container, text='Eliminar Tarea', command = lambda : ctr.eliminar_tarea(int(campos['id'].get())))
+        btnEliminar = tk.Button(container, bg='#181818', text='Eliminar Tarea', fg="white", command = lambda : ctr.eliminar_tarea(int(campos['id'].get())))
         btnEliminar.grid(column=1, row=3, sticky=tk.EW, pady = 2)
         
-        btnSalirGuardar = tk.Button(container, text='Salir y Guardar', command = salirAplicacion) 
+        btnSalirGuardar = tk.Button(container, bg='#181818', text='Salir y Guardar', fg="white", command = salirAplicacion) 
         btnSalirGuardar.grid(column=1, row=4, sticky=tk.EW, pady = 2)
 
         #Etiqueta informativa funcionamiento App
-        etiquetaFuncionamiento = tk.Label(container, text="-> Cargar Info antes de CRUD")
+        etiquetaFuncionamiento = tk.Label(container, text="Cargar Info antes de CRUD \n\n \xa9 CarlDesigner", fg="#000000")
         etiquetaFuncionamiento.grid(column=1, row=5, pady = 2) 
 
     global ventana, campos
     
     ventana = tk.Tk()
-    ventana.title('Aplicación CRUD Tareas Pendientes')
+    ventana.title('Aplicación CRUD Tareas Pendientes' +'   -   '+ 'Desarrollado por CARLOS FAJARDO')
     ventana.columnconfigure(0, weight=4)
     ventana.columnconfigure(1, weight=1)
 
