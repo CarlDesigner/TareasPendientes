@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import Image, ttk, messagebox
 
-import controlador as ctr
+import controller as ctr
 
 ventana = None
 campos = {}
