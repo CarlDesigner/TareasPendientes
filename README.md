@@ -5,3 +5,5 @@
 > **Universidad Tecnológica de Pereira**
 
 > **Patron de Arquitectura MVC (Modelo-Vista-Controlador)**
+
+- Author: **CarlDesigner**
