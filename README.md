@@ -6,4 +6,4 @@
 
 > **Patron de Arquitectura MVC (Modelo-Vista-Controlador)**
 
-- Author: **CarlDesigner**
+Author: `@CarlDesigner`
